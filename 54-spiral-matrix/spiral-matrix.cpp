@@ -23,9 +23,9 @@ public:
         if(top<=bottom){
         for(int i=right; i>=left; i--){
             ans.push_back(matrix[bottom][i]);
+        }bottom--;
         }
-        }
-        bottom--;
+        
 
         if(left<=right){
         for(int i=bottom; i>=top; i--){
