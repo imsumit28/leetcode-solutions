@@ -6,18 +6,19 @@ public:
         long long count = 0;
         int right = mid + 1;
 
+
         for (int i = low; i <= mid; i++) {
 
-        
+   
             while (right <= high &&
-                   nums[i] > 2LL*nums[right]) {
+                   nums[i] > 2LL* nums[right]) {
                 right++;
             }
 
             count += right - (mid + 1);
         }
 
- 
+
         vector<int> temp;
 
         int left = low;
