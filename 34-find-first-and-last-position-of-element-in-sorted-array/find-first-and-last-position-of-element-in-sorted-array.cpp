@@ -40,7 +40,7 @@ public:
             }
         }
 
-        
+        if(first == -1) return{-1,-1};
 
         return{first,last};
     } 
