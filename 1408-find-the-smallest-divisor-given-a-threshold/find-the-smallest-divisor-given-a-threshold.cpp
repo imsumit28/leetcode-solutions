@@ -5,7 +5,7 @@ public:
         int n = nums.size();
         int sum = 0;
         for(int i = 0; i<n;i++){
-            sum += ceil((double)(nums[i]) / (double)(div));
+            sum += ceil((double)(nums[i]) / (double)(div)); // double nhi likhne se answer galat aa raha hai so make sure to write double of nums of i divided by double of div 
         }
 
         return sum;
