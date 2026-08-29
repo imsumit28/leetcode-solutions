@@ -41,6 +41,6 @@ public:
             }
         }
 
-        return low;
+        return low; // opposite polarity ho gaya hai isiliye we returned low or simple we can also use a answer variable and return the answer variable at the end
     }
 };
