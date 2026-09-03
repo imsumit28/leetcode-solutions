@@ -1,5 +1,6 @@
 class Solution {
 public:
+// max element batata hai ki which row cotains max element in a given column
     int maxElement(vector<vector<int>> &mat, int n, int m, int col){
         int maxValue = -1;
         int index = -1;
@@ -11,7 +12,7 @@ public:
             }
         }
 
-        return index;
+        return index; // return kardo max value wala index
     }
 
 
@@ -19,12 +20,12 @@ public:
 
 
     vector<int> findPeakGrid(vector<vector<int>>& mat) {
-        int n = mat.size();
-        int m = mat[0].size();
+        int n = mat.size(); // row
+        int m = mat[0].size(); // col
         int low = 0, high = m-1;
         while(low<=high){
             int mid = (low+high) / 2;
-            int row = maxElement(mat, n, m, mid);
+            int row = maxElement(mat, n, m, mid); // which row ccontains largest value in column mid
             int left = mid-1>=0 ? mat[row][mid-1] : -1;
             int right = m > mid+1 ? mat[row][mid+1] : -1;
 
