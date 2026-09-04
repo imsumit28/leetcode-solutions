@@ -2,34 +2,24 @@ class Solution {
 public:
     bool isIsomorphic(string s, string t) {
         
-        if (s.size() != t.size()) {
+        if(s.size() != t.size()){
             return false;
         }
 
-       
         unordered_map<char, char> sToT;
+        unordered_map<char, char> TToS;
 
-       
-        unordered_map<char, char> tToS;
-
-        for (int i = 0; i < s.size(); i++) {
-
-            char charS = s[i];
-            char charT = t[i];
-
-            
-            if (sToT.count(charS) && sToT[charS] != charT) {
+        for(int i = 0; i<s.size(); i++){
+            if(sToT.count(s[i]) &&  sToT[s[i]] != t[i]){
                 return false;
             }
 
-           
-            if (tToS.count(charT) && tToS[charT] != charS) {
+            if(TToS.count(t[i]) && TToS[t[i]] != s[i]){
                 return false;
             }
 
-            
-            sToT[charS] = charT;
-            tToS[charT] = charS;
+            sToT[s[i]] = t[i];
+            TToS[t[i]] = s[i];
         }
 
         return true;
